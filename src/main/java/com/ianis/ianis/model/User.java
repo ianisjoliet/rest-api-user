@@ -1,7 +1,7 @@
 package com.ianis.ianis.model;
 
 public class User {
-    private final String id;
+    private final int id;
     private final String login;
     private final String password;
     private final String firstname;
@@ -9,7 +9,7 @@ public class User {
     private final String email;
     private final String phoneNb;
 
-    public User(String id, String firstname, String lastname, String email, String phoneNB, String login, String password)
+    public User(int id, String firstname, String lastname, String email, String phoneNB, String login, String password)
     {
         this.id = id;
         this.firstname = firstname;
@@ -20,7 +20,7 @@ public class User {
         this.password = password;
     }
 
-    public String getId()
+    public int getId()
     {
         return id;
     }
