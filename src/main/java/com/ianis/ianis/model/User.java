@@ -1,23 +1,49 @@
 package com.ianis.ianis.model;
 
-public class User {
-    private final int id;
-    private final String login;
-    private final String password;
-    private final String firstname;
-    private final String lastname;
-    private final String email;
-    private final String phoneNb;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    public User(int id, String firstname, String lastname, String email, String phoneNB, String login, String password)
-    {
+@Entity
+@Table(name = "users")
+public class User {
+
+    @Id
+    private int id;
+    private String login;
+    private String password;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private String phoneNb;
+
+    public void setId(int id) {
         this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.email = email;
-        this.phoneNb = phoneNB;
+    }
+
+    public void setLogin(String login) {
         this.login = login;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoneNb(String phoneNb) {
+        this.phoneNb = phoneNb;
     }
 
     public int getId()
